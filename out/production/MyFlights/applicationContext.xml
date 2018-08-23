@@ -8,8 +8,18 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Define your beans here -->
+
+    <!-- Define the dependency -->
+    <bean id="myFortune"
+          class="com.example.java.HappyFlightService">
+    </bean>
+
+
     <bean id="myFlight"
           class="com.example.java.SurinamAirways">
+
+        <!-- Define the dependency -->
+        <constructor-arg ref="myFortune" />
     </bean>
     
 </beans>
