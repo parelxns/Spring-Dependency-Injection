@@ -14,6 +14,9 @@ public class SpringIoCApp {
         // call methods on the bean
         System.out.println(theFlight.getDailyFlight());
 
+        // call new methods
+        System.out.println(theFlight.getDailyFortune());
+
         // close the context
         context.close();
     }
